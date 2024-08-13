@@ -1,0 +1,24 @@
+services:
+  mysqldb:
+    image: mysql:8.4.0
+    container_name: mysqlcontainer
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_DATABASE: hadiya
+      MYSQL_PASSWORD: 1234
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_USER: admin1
+      MYSQL_USER_PASSWORD: Himanshu
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysqldb
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/0_init.sql
+      - $HOME/database:/var/lib/mysql
+      - /var/run/mysqld/:/var/run/mysqld
+    ports:
+      - "3030:3306"
+    expose:
+      - 3306
+    networks:
+      - internalnet

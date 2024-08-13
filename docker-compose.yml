@@ -20,5 +20,3 @@ services:
       - "3030:3306"
     expose:
       - 3306
-    networks:
-      - internalnet

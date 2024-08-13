@@ -8,8 +8,6 @@ services:
       MYSQL_DATABASE: hadiya
       MYSQL_PASSWORD: 1234
       MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_USER: admin1
-      MYSQL_USER_PASSWORD: Himanshu
       SERVICE_TAGS: dev
       SERVICE_NAME: mysqldb
     volumes:

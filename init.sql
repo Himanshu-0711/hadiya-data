@@ -1,5 +1,4 @@
 CREATE USER 'Himanshu'@'%' IDENTIFIED BY 'pass';
-CREATE DATABASE hadiya ;
 GRANT ALL PRIVILEGES ON hadiya.* TO 'Himanshu'@'%';
 FLUSH PRIVILEGES;
 USE hadiya ;
